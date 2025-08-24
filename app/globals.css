@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1ee2f0;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -20,7 +20,16 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(270deg, #1ee2f0, #7f53ac, #f7971e, #ffd200, #1ee2f0);
+  background-size: 1000% 1000%;
+  animation: gradientMove 20s ease infinite;  /*this is doing the animation magic*/
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*this keyframes is helping with the animation magic*/
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
